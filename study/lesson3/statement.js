@@ -39,7 +39,7 @@ console.log('\n');
 * 循环语句-for
 *
 * 循环语句的三要素
-* 1. 循环开始的初始化变量 var i = 0; 
+* 1. 循环开始的初始化变量 var i = 0;
 * 2. 循环条件 i < myLikeColorsList.length;
 * 3. 计数器变量更新 i++;
 */
@@ -81,6 +81,21 @@ for (
 }
 
 console.log('\n');
+
+//for+if组合 规避数组长度为奇数时重复输出中间成员
+for (
+  var i = 0, j = myLikeColorsList.length - 1;
+  i < myLikeColorsList.length / 2;
+  i++, j--
+) {
+if (i!=j){
+  console.log(myLikeColorsList[i]);
+  console.log(myLikeColorsList[j]);
+}else{
+  console.log(myLikeColorsList[i]);
+}
+}
+
 
 /*
 * 循环语句 -- while
